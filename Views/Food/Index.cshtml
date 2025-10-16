@@ -1,0 +1,12 @@
+﻿@model IEnumerable<FastFoodStore.Models.Food>
+<h2>Danh sách món ăn</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <img src="@item.ImageUrl" width="100" />
+            <b>@item.Name</b> - @item.Price VNĐ
+            <a href="/Food/Details/@item.Id">Chi tiết</a>
+        </li>
+    }
+</ul>
